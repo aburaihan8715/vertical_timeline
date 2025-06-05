@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #333;
+  background-color: #fefefe;
+}
+
+/* main style */
+
+.timeline_area {
+  width: 1000px;
+  margin: 50px auto;
+}
+
+.timeline_heading {
+  font-size: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.timeline_list::after {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  background: tomato;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline_list {
+  position: relative;
+  list-style: none;
+}
+
+.timeline_list li .timeline_content {
+  width: 47%;
+  padding: 20px;
+  border: 1px solid tomato;
+  float: left;
+}
+
+.timeline_list li {
+  display: table;
+  clear: both;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: right;
+}
+
+.timeline_list li::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background: tomato;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.timeline_list li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline_list li:nth-child(even) .timeline_content {
+  float: right;
+  text-align: left;
+}
